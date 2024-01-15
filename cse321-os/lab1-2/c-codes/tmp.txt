@@ -1,0 +1,16 @@
+λ gcc task-2a.c
+
+λ ./a.out
+Enter 2 num & a char:
+1 2
+Addition result: -1
+
+λ ./a.out
+Enter 2 num & a char:
+2 1
+Substraction result: 1
+
+λ ./a.out
+Enter 2 num & a char:
+2 2
+Multiplication result: 

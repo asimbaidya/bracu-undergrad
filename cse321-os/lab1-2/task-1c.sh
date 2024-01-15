@@ -1,0 +1,2 @@
+ls ~ # home
+ls / # rooot
