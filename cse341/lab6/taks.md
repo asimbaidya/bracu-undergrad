@@ -1,0 +1,5 @@
+- Input a word and check whether the word is palindrome or not.
+  - Input a string and check whether all the letters of the word are unique or not.
+- Input a number and check whether all the digits of that number are unique or not.
+- Take five elements in an array and print them in reverse order using stack.
+  - Input a string and reverse it using stack.
