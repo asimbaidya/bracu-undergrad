@@ -1,0 +1,90 @@
+[
+  {
+    "member_id": "1",
+    "name": "Taylor Otwell",
+    "email": "otwell@laravel.com",
+    "influence_count": "739360",
+    "Joining_date": "2020-6-10",
+    "multiplier": "10"
+  },
+  {
+    "member_id": "2",
+    "name": "Ryan Dahl",
+    "email": "ryan@nodejs.org",
+    "influence_count": "633632",
+    "Joining_date": "2020-04-22",
+    "multiplier": "10"
+  },
+  {
+    "member_id": "3",
+    "name": "Brendan Eich",
+    "email": "eich@javascript.com",
+    "influence_count": "939570",
+    "Joining_date": "2020-05-07",
+    "multiplier": "8"
+  },
+  {
+    "member_id": "5",
+    "name": "Evan You",
+    "email": "you@vuejs.org",
+    "influence_count": "982630",
+    "Joining_date": "2020-06-11",
+    "multiplier": "7"
+  },
+  {
+    "member_id": "6",
+    "name": "Rasmus Lerdorf",
+    "email": "lerdorf@php.net",
+    "influence_count": "937927",
+    "Joining_date": "2020-06-3",
+    "multiplier": "8"
+  },
+  {
+    "member_id": "7",
+    "name": "Guido van Rossum",
+    "email": "guido@python.org",
+    "influence_count": "968827",
+    "Joining_date": "2020-07-18",
+    "multiplier": "19"
+  },
+  {
+    "member_id": "8",
+    "name": "Adrian Holovaty",
+    "email": "adrian@djangoproject.com",
+    "influence_count": "570724",
+    "Joining_date": "2020-05-07",
+    "multiplier": "5"
+  },
+  {
+    "member_id": "9",
+    "name": "Simon Willison",
+    "email": "simon@djangoproject.com",
+    "influence_count": "864615",
+    "Joining_date": "2020-04-30",
+    "multiplier": "4"
+  },
+  {
+    "member_id": "10",
+    "name": "James Gosling",
+    "email": "james@java.com",
+    "influence_count": "719491",
+    "Joining_date": "2020-05-18",
+    "multiplier": "5"
+  },
+  {
+    "member_id": "11",
+    "name": "Rod Johnson",
+    "email": "rod@spring.io",
+    "influence_count": "601744",
+    "Joining_date": "2020-05-18",
+    "multiplier": "7"
+  },
+  {
+    "member_id": "12",
+    "name": "Satoshi Nakamoto",
+    "email": "nakamoto@blockchain.com",
+    "influence_count": "630488",
+    "Joining_date": "2020-05-10",
+    "multiplier": "10"
+  }
+]
