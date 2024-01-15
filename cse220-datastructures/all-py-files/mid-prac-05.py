@@ -17,7 +17,7 @@ class DHDLList:
 
     def __str__(self):
         tmp = self.head.next
-        output = ''
+        output = ""
         while tmp is not self.head:
             output += f"{tmp.data} "
             tmp = tmp.next

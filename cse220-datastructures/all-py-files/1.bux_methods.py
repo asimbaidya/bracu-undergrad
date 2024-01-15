@@ -2,14 +2,14 @@
 # 5.1
 # insert function
 def insert(head, size, elem, index):
-    if(index < 0 or index > size):
+    if index < 0 or index > size:
         raise Exception("Invalid index")
     newNode = Node(elem, None)
-    if (index == 0):
+    if index == 0:
         newNode.next = head
         head = newNode
     else:
-        pred = nodeAt(index-1)
+        pred = nodeAt(index - 1)
         newNode.next = pred.next
         pred.next = newNode
     return head
@@ -17,19 +17,20 @@ def insert(head, size, elem, index):
 
 # remove function
 def remove(head, size, index):
-    if(index < 0 or index >= size):
+    if index < 0 or index >= size:
         raise Exception("Invalid index")
     removedNode = None
-    if (index == 0):
+    if index == 0:
         removedNode = head
         head = head.next
     else:
-        pred = nodeAt(index-1)
+        pred = nodeAt(index - 1)
         removedNode = pred.next
         pred.next = removedNode.next
     removedNode.element = None
     removedNode.next = None
     return head
+
 
 # wtf is nodeat
 # ==================================================
@@ -42,7 +43,7 @@ def createList(array):
     tail = None
     for i in range(0, len(array)):
         newNode = Node(array[i], None)
-        if(head == None):
+        if head == None:
             head = newNode
             tail = newNode
         else:
@@ -56,9 +57,9 @@ def copyList(head):
     copyHead = None
     copyTail = None
     n = head
-    while(n is not None):
+    while n is not None:
         newNode = Node(n.element, None)
-        if(copyHead == None):
+        if copyHead == None:
             copyHead = newNode
             copyTail = newNode
         else:
@@ -66,6 +67,7 @@ def copyList(head):
             copyTail = newNode
         n = n.next
     return copyHead
+
 
 # ==================================================
 # 5.3
@@ -75,9 +77,9 @@ def copyList(head):
 def reverseList(head):
     copyHead = None
     n = head
-    while(n is not None):
+    while n is not None:
         newNode = Node(n.element, None)
-        if(copyHead == None):
+        if copyHead == None:
             copyHead = newNode
         else:
             newNode.next = copyHead
@@ -90,7 +92,7 @@ def reverseList(head):
 def reverseList1(head):
     newHead = None
     n = head
-    while(n is not None):
+    while n is not None:
         nextNode = n.next
         n.next = newHead
         newHead = n
@@ -103,7 +105,7 @@ def rotateLeft(head):
     oldHead = head
     head = head.next
     tail = head
-    while(tail.next is not None):
+    while tail.next is not None:
         tail = tail.next
     tail.next = oldHead
     oldHead.next = None

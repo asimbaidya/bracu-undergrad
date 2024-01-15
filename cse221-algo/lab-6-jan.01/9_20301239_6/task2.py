@@ -21,37 +21,33 @@ def lcs(x, y, z):
                             max = c[i - 1][j][k]
                             if max >= c[i][j][k - 1]:
                                 c[i][j][k] = max
-                                t[i][j][k] = c[i - 1][j -
-                                                      1][k]  # up - up - left
+                                t[i][j][k] = c[i - 1][j - 1][k]  # up - up - left
                             else:
                                 max = c[i][j][k - 1]
                                 c[i][j][k] = max  # max
-                                t[i][j][k] = c[i][j - 1][k -
-                                                         1]  # left - up - up
+                                t[i][j][k] = c[i][j - 1][k - 1]  # left - up - up
                         else:
                             max = c[i][j - 1][k]
                             if max >= c[i][j][k - 1]:
                                 c[i][j][k] = max  # max
-                                t[i][j][k] = c[i - 1][j][k -
-                                                         1]  # up - left - up
+                                t[i][j][k] = c[i - 1][j][k - 1]  # up - left - up
                             else:
                                 max = c[i][j][k - 1]
                                 c[i][j][k] = 0  # max
-                                t[i][j][k] = c[i][j - 1][k -
-                                                         1]  # left - up - up
+                                t[i][j][k] = c[i][j - 1][k - 1]  # left - up - up
     return c[m - 1][n - 1][o - 1]
 
 
 def main():
-    with open("./input2.txt", 'r') as input_data:
+    with open("./input2.txt", "r") as input_data:
         n = input_data.readline()[:-1]
         p = input_data.readline()[:-1]
         r = input_data.readline()[:-1]
 
-    with open('./output2.txt', 'w') as output_data:
+    with open("./output2.txt", "w") as output_data:
         l = lcs(n, p, r)
-        output_data.write(f'{l}')
+        output_data.write(f"{l}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

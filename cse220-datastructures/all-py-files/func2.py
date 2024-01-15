@@ -1,6 +1,6 @@
 def func(x, y):
     if x < 0 or x >= y:
-        print('END')
+        print("END")
         return -1
     else:
         print(y)

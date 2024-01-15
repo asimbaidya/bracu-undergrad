@@ -35,9 +35,9 @@ def hash(string):
     con_cnt = 0
     num_sum = 0
     for char in string:
-        if 'A' <= char <= 'Z' and char not in ('A', 'E', 'I', 'O', 'U'):
+        if "A" <= char <= "Z" and char not in ("A", "E", "I", "O", "U"):
             con_cnt += 1
-        elif '0' <= char <= '9':
+        elif "0" <= char <= "9":
             num_sum += ord(char) - 48
     return (con_cnt * 24 + num_sum) % 9
 
@@ -58,7 +58,6 @@ def hash_table(arr):
 
 
 if __name__ == "__main__":
-
     #    # Task 01 tests
     #    if 0:
     #        arr1 = [1, 2, 2, 2, 2, 2, -4, -4, -4, -4, -5, 6, 300000]
@@ -69,17 +68,17 @@ if __name__ == "__main__":
     #
     # Task 02 tests
     if 1:
-        s = 'ST1E89B8A32'
+        s = "ST1E89B8A32"
         # outputs the generated hash_function_value
         print(hash(s))
 
         arr2 = [
-            'ST1E89B8A32',
-            'ST1E89B8A10',
-            'ST1E89B8A13',
-            'ST1E89B8A16',
-            'ST1E89B8A19',
-            'ST1E89B8A22',
-            'ST1E89B8A25',
+            "ST1E89B8A32",
+            "ST1E89B8A10",
+            "ST1E89B8A13",
+            "ST1E89B8A16",
+            "ST1E89B8A19",
+            "ST1E89B8A22",
+            "ST1E89B8A25",
         ]
         print(hash_table(arr2))

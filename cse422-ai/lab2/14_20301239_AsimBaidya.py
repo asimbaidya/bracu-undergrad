@@ -7,13 +7,12 @@ class GeneticAlgorithm:
     to_del = 25
 
     def __init__(self, file_path):
-        self.t_player, self.t_run, self.players = self.read_user_input(
-            file_path)
+        self.t_player, self.t_run, self.players = self.read_user_input(file_path)
 
         players = [p[1] for p in self.players]
         result = self.run_algo()
         print(players)
-        print(-1 if not result else ' '.join(map(str, result)))
+        print(-1 if not result else " ".join(map(str, result)))
 
     def run_algo(self):
         population = self.random_p_gen()
@@ -43,7 +42,8 @@ class GeneticAlgorithm:
 
             for i in range(self.rp_size - 1):
                 population[i], population[i + 1] = self.cross_over(
-                    population[i], population[i + 1])
+                    population[i], population[i + 1]
+                )
             # random mutation
             for i in range(self.rp_size):
                 population[i] = self.mutation(population[i])
@@ -91,7 +91,7 @@ class GeneticAlgorithm:
         to read and format used inputs.
         """
         raw_input = None
-        with open(file_path, 'r') as input_file:
+        with open(file_path, "r") as input_file:
             raw_input = input_file.readlines()
 
         n_player, t_run = map(int, raw_input.pop(0).split())
@@ -109,8 +109,8 @@ def main():
     # GeneticAlgorithm('input1.txt')
     # GeneticAlgorithm('input2.txt')
     # GeneticAlgorithm('input3.txt')
-    GeneticAlgorithm('input4.txt')
+    GeneticAlgorithm("input4.txt")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

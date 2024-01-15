@@ -1,6 +1,6 @@
 class list_stack:
     def __init__(self, size=10) -> None:
-        self.data = [0]*size
+        self.data = [0] * size
         self.size = 0
         self.capacity = size
 
@@ -15,7 +15,7 @@ class list_stack:
 
     def peek(self):
         if self.size > 0 and self.size < self.capacity:
-            return self.data[self.size-1]
+            return self.data[self.size - 1]
         else:
             raise Exception("The stack is empty")
 
@@ -27,7 +27,7 @@ class list_stack:
             raise Exception("The stack is empty")
 
     def __str__(self):
-        output = ''
+        output = ""
         for i in self.data:
             output += f"{i} | "
         return output[:-3]
@@ -36,15 +36,15 @@ class list_stack:
 if __name__ == "__main__":
     s = list_stack()
 
-    i = '*/%'
-    ii = '+-'
+    i = "*/%"
+    ii = "+-"
 
-    exp = 'A+B*C'  # ans: A B C * +
-    exp = 'A*B+C'  # ans: A B + C *
+    exp = "A+B*C"  # ans: A B C * +
+    exp = "A*B+C"  # ans: A B + C *
     exp = "A+B*C-D"  # ans: A B C * + D -
     exp = "A+B*(C-D/E)"
 
-    result = ''
+    result = ""
 
     for e in exp:
         if e in i:

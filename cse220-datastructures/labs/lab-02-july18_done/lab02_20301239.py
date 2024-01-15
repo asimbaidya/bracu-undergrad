@@ -23,7 +23,7 @@ class LinkedList:
         if self.head is not None:
             current = self.head
             while current:
-                print(current.ele, end=' ')
+                print(current.ele, end=" ")
                 current = current.next
             print()
         else:
@@ -185,7 +185,7 @@ class LinkedList:
 
     # 3.6 done
     def rotate(self, side, k):
-        if side == 'left':
+        if side == "left":
             old_head = self.head
             new_head = self.head
             for _ in range(k):
@@ -198,7 +198,7 @@ class LinkedList:
                 old_head = old_head.next
             old_head.next = None
             self.head = new_head
-        elif side == 'right':
+        elif side == "right":
             old_head = self.head
             new_head = self.head
             tmp = self.head
@@ -217,86 +217,85 @@ class LinkedList:
 
 # test codes
 if __name__ == "__main__":
-
     ll1 = LinkedList([5, 4, 3, 2, 1])
     ll2 = LinkedList([1])
     ll2.head = None
 
     # test 2.2
-    #ll1.show_list()
+    # ll1.show_list()
     ll2.show_list()
 
     # test 2.3
-    #print(ll1.is_empty())
-    #print(ll2.is_empty())
+    # print(ll1.is_empty())
+    # print(ll2.is_empty())
 
     # test 2.4
-    #ll1.clear()
-    #ll2.clear()
+    # ll1.clear()
+    # ll2.clear()
 
     # test 2.5
-    #ll1.append(10)
-    #ll1.append(1)
-    #ll2.append(10)
-    #ll1.show_list()
-    #ll2.show_list()
+    # ll1.append(10)
+    # ll1.append(1)
+    # ll2.append(10)
+    # ll1.show_list()
+    # ll2.show_list()
 
     # test 2.6
-    #ll1.show_list()
-    #ll1.insert(10, 0)
-    #ll1.show_list()
-    #ll1.insert(34, 3)
-    #ll1.show_list()
+    # ll1.show_list()
+    # ll1.insert(10, 0)
+    # ll1.show_list()
+    # ll1.insert(34, 3)
+    # ll1.show_list()
 
     # test 2.7
-    #ll1.show_list()
-    #node1 = ll1.remove(3)
-    #node2 = ll1.remove(5)
-    #node3 = ll1.remove(1)
-    #node4 = ll1.remove(43)
-    #print(node1.ele)
-    #print(node2.ele)
-    #print(node3.ele)
-    #ll1.show_list()
+    # ll1.show_list()
+    # node1 = ll1.remove(3)
+    # node2 = ll1.remove(5)
+    # node3 = ll1.remove(1)
+    # node4 = ll1.remove(43)
+    # print(node1.ele)
+    # print(node2.ele)
+    # print(node3.ele)
+    # ll1.show_list()
 
     # test 3.1
-    #e1 = ll1.get_evens()
-    #e2 = ll1.get_evens_()
-    #e1.show_list()
-    #while e2:
+    # e1 = ll1.get_evens()
+    # e2 = ll1.get_evens_()
+    # e1.show_list()
+    # while e2:
     #    print(e2.ele)
     #    e2 = e2.next
 
     # test3.2
-    #print(ll1.if_exist(1))
-    #print(ll1.if_exist(10))
-    #print(ll1.if_exist(3))
+    # print(ll1.if_exist(1))
+    # print(ll1.if_exist(10))
+    # print(ll1.if_exist(3))
 
     # test 3.3
-    #ll1.show_list()
-    #ll1.reverse()
-    #ll1.show_list()
-    #ll1.reverse()
-    #ll1.show_list()
+    # ll1.show_list()
+    # ll1.reverse()
+    # ll1.show_list()
+    # ll1.reverse()
+    # ll1.show_list()
 
     # test 3.4
-    #ll1.show_list()
-    #ll1.sort()
-    #ll1.show_list()
-    #ll1.reverse()
-    #ll1.show_list()
-    #ll1.bubble_sort()
-    #ll1.show_list()
+    # ll1.show_list()
+    # ll1.sort()
+    # ll1.show_list()
+    # ll1.reverse()
+    # ll1.show_list()
+    # ll1.bubble_sort()
+    # ll1.show_list()
 
     # test 3.5
-    #llx = LinkedList([1, 2, 5, 3, 8])
-    #print(llx.sum())
-    #print(ll1.sum())
-    #print(ll2.sum())
+    # llx = LinkedList([1, 2, 5, 3, 8])
+    # print(llx.sum())
+    # print(ll1.sum())
+    # print(ll2.sum())
 
     # test 3.6
-    #ll1 = LinkedList([3, 2, 5, 1, 8])
-    #ll1.show_list()
-    #ll1.rotate('left', 2)
-    #ll1.rotate('right', 2)
-    #ll1.show_list()
+    # ll1 = LinkedList([3, 2, 5, 1, 8])
+    # ll1.show_list()
+    # ll1.rotate('left', 2)
+    # ll1.rotate('right', 2)
+    # ll1.show_list()

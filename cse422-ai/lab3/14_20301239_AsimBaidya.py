@@ -1,10 +1,8 @@
 import numpy as np  # for some reason, python3.10 throws some English erros
 
 
-class MaxMin():
-
+class MaxMin:
     def __init__(self):
-
         self.max_depth = 3
         self.target = -1
         self.pts = np.array([])
@@ -16,26 +14,24 @@ class MaxMin():
 
         self.target, self.pts = self.user_input(2**self.max_depth)
 
-        print('\n', '-' * 25, 'Task1', '-' * 25, sep='')
+        print("\n", "-" * 25, "Task1", "-" * 25, sep="")
         self.task_1()
-        print('\n', '-' * 25, 'Task2', '-' * 25, sep='')
+        print("\n", "-" * 25, "Task2", "-" * 25, sep="")
         self.task_2()
 
     def task_1(self):
         score = self.algo(self.pts)
 
         # outputs
-        print(
-            'Generated 8 random points between the minimum and maximum point limits:'
-        )
+        print("Generated 8 random points between the minimum and maximum point limits:")
         print(self.pts)
-        print(f'Total points to win: {self.target}')
-        print(f'Achieved points by applying alpha-beta pruning = {score}')
+        print(f"Total points to win: {self.target}")
+        print(f"Achieved points by applying alpha-beta pruning = {score}")
 
-        if (score >= self.target):
+        if score >= self.target:
             print("The winner is Optimus Prime")
         else:
-            print('The Winner is Megatron')
+            print("The Winner is Megatron")
 
     def task_2(self):
         # random number generator
@@ -54,21 +50,21 @@ class MaxMin():
                 win_count += 1
 
         # output
-        print('After Shuffle:')
-        print('List of all points values from each shuffle:')
+        print("After Shuffle:")
+        print("List of all points values from each shuffle:")
         print(scores)
         print(f"The Maximum value of all Shuffle: {max(scores)}")
-        print(f'Won {win_count} times out of {self.shuffle} number of shuffle')
+        print(f"Won {win_count} times out of {self.shuffle} number of shuffle")
 
     def algo(
-            self,
-            pts: list[int],
-            current_index: int = 0,
-            current_depth: int = 0,
-            max_depth: int = 3,
-            alpha: float = float('-infinity'),
-            beta: float = float('infinity'),
-            max_player: bool = True,
+        self,
+        pts: list[int],
+        current_index: int = 0,
+        current_depth: int = 0,
+        max_depth: int = 3,
+        alpha: float = float("-infinity"),
+        beta: float = float("infinity"),
+        max_player: bool = True,
     ):
         """
         Main Algorithm
@@ -80,8 +76,8 @@ class MaxMin():
         ch1 = current_index * 2
         ch2 = current_index * 2 + 1
 
-        if (max_player):
-            min_points = float('-infinity')
+        if max_player:
+            min_points = float("-infinity")
             for ch in [ch1, ch2]:
                 score = self.algo(
                     pts,
@@ -98,7 +94,7 @@ class MaxMin():
                     return min_points
             return min_points
         else:
-            max_points = float('infinity')
+            max_points = float("infinity")
             for ch in [ch1, ch2]:
                 score = self.algo(
                     pts,
@@ -122,8 +118,8 @@ class MaxMin():
         # handing zeros in user id (0 -> 8)
         no_zero = ""
         for char in user_id:
-            if char == '0':
-                no_zero += '8'
+            if char == "0":
+                no_zero += "8"
             else:
                 no_zero += char
 
@@ -154,5 +150,5 @@ def main():
     MaxMin()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

@@ -39,15 +39,15 @@ def swapDeleteMid(head):
         while tmp is not None:
             if count == 1:
                 first_sec = tmp
-            if count == size-2:
+            if count == size - 2:
                 last_sec = tmp
             tmp = tmp.next
             count += 1
         first_sec.ele, last_sec.ele = last_sec.ele, first_sec.ele
 
-        mid = size//2
+        mid = size // 2
         tmp = head
-        for i in range(mid-1):
+        for i in range(mid - 1):
             tmp = tmp.next
         s = tmp.next.next
         tmp.next = s
@@ -60,7 +60,7 @@ if __name__ == "__main__":
     ll2 = LinkedListt([])
     ll3 = LinkedListt([1])
     ll4 = LinkedListt([1, 2, 3, 4, 5, 6])
-#
+    #
     swapDeleteMid(ll.head)
     # swapDeleteMid(ll2.head)
     # swapDeleteMid(ll3.head)
@@ -68,12 +68,12 @@ if __name__ == "__main__":
 
     t = ll.head
     while t:
-        print(t.ele, end=' ')
+        print(t.ele, end=" ")
         t = t.next
 
     print()
     t = ll4.head
     while t:
-        print(t.ele, end=' ')
+        print(t.ele, end=" ")
         t = t.next
     print()

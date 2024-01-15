@@ -35,9 +35,9 @@ def hash(string):
     cc = 0
     ns = 0
     for char in string:
-        if 'A' <= char <= 'Z' and char not in ('A', 'E', 'I', 'O', 'U'):
+        if "A" <= char <= "Z" and char not in ("A", "E", "I", "O", "U"):
             cc += 1
-        elif '0' <= char <= '9':
+        elif "0" <= char <= "9":
             ns += int(char)
     return (cc * 24 + ns) % 9
 
@@ -66,7 +66,14 @@ print(k.sort())
 
 # task2
 a2 = [
-    'ST1E89B8A32', 'ST1E89B8A32', 'ST1E89B8A32', 'ST1E89B8A32', 'ST1E89B8A32',
-    'ST1E89B8A32', 'ST1E89B8A32', 'ST1E89B8A32', 'ST1E89B8A32',
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
+    "ST1E89B8A32",
 ]
 print(hash_table(a2))

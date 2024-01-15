@@ -18,7 +18,7 @@ def insertion_sort(arr):
 
 
 def main():
-    with open('input3.txt', 'r') as file:
+    with open("input3.txt", "r") as file:
         tmp = file.readlines()
         tmp = [i[:-1] for i in tmp]
 
@@ -45,13 +45,13 @@ def main():
     print(st1)
     print(st2)
 
-    with open('outpu3.txt', 'w') as file:
+    with open("outpu3.txt", "w") as file:
         for _id in st1:
-            file.writelines(str(_id) + ' ')
-        file.writelines('\n')
+            file.writelines(str(_id) + " ")
+        file.writelines("\n")
         for _id in st2:
-            file.writelines(str(_id) + ' ')
-        file.writelines('\n')
+            file.writelines(str(_id) + " ")
+        file.writelines("\n")
 
 
 if __name__ == "__main__":

@@ -19,10 +19,10 @@ class LinkedList:
                 tmp = tmp.next
 
     def __str__(self):
-        output = ''
+        output = ""
         tmp = self.head
         while tmp is not None:
-            output += str(tmp.data) + ' '
+            output += str(tmp.data) + " "
             tmp = tmp.next
         return output[:-1]
 
@@ -55,7 +55,7 @@ def show(arr, i=0):
         show(arr, i + 1)
 
 
-#1.d done
+# 1.d done
 def power(base, n):
     if n == 0:
         return 1
@@ -63,15 +63,15 @@ def power(base, n):
         return base * power(base, n - 1)
 
 
-#2.a output or print
+# 2.a output or print
 def to_bin(n):
     if n == 0:
-        return ''
+        return ""
     else:
         return to_bin(n // 2) + str(n % 2)
 
 
-#2.b done
+# 2.b done
 def node_sum(head):
     if head.next is None:
         return head.data
@@ -102,7 +102,7 @@ def print_num(n, foo=False):
         return
     else:
         print_num(n - 1)
-        print(n, end='')
+        print(n, end="")
     if foo:
         print()
 
@@ -112,7 +112,7 @@ def print_space(n):
         return
     else:
         print_space(n - 1)
-        print(' ', end='')
+        print(" ", end="")
 
 
 # 4.a Done
@@ -155,14 +155,13 @@ class FinalQ:
 
 # --------------------------------------------------
 if __name__ == "__main__":
-
     # test 1.a
     n = 10
-    print(f'factorial of {n} := {fact(10)}')
+    print(f"factorial of {n} := {fact(10)}")
 
     # test 1.b
     for i in range(10):
-        print(f'{i}th fibonacci:= {fib(i)}')
+        print(f"{i}th fibonacci:= {fib(i)}")
 
     # test 1.c
     show([1, 2, 3])
@@ -172,7 +171,7 @@ if __name__ == "__main__":
     p = 0
     for b in range(2, 10, 3):
         for p in range(2, 5):
-            print(f'{b}^{p} := {power(b, p):5d}')
+            print(f"{b}^{p} := {power(b, p):5d}")
 
     # test 2.a
     dec = [1, 2, 3, 4, 5, 7, 15, 31, 63, 127, 255]
@@ -184,16 +183,16 @@ if __name__ == "__main__":
     l2 = LinkedList([10, 20, 30, 40])
 
     # test 2.b
-    print(f'sum of linked_list [{str(ll)}] :=', node_sum(ll.head))
-    print(f'sum of linked_list [{str(l2)}] :=', node_sum(l2.head))
+    print(f"sum of linked_list [{str(ll)}] :=", node_sum(ll.head))
+    print(f"sum of linked_list [{str(l2)}] :=", node_sum(l2.head))
 
     # test 2.c
-    print(f'Showing [{str(l2)}] recursively in reverse')
+    print(f"Showing [{str(l2)}] recursively in reverse")
     show_list(l2.head)
 
     # test 3
     for i in range(10):
-        print(f'To build {i} level := {hocBuilder(i):3d} is required cards')
+        print(f"To build {i} level := {hocBuilder(i):3d} is required cards")
 
     # test 4.a
     right_incline(9)
@@ -202,8 +201,8 @@ if __name__ == "__main__":
     left_incline(9, 9)
 
     # test 5
-    #TO DO
-    #Tester
+    # TO DO
+    # Tester
     array = [25000, 100000, 250000, 350000]
     f = FinalQ()
     f.print(array, 0)

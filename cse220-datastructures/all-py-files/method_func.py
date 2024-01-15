@@ -1,5 +1,5 @@
 def func(x, called=0):
-    print('called', called)
+    print("called", called)
     if x == 0 or x == 3:
         print("stop")
     else:

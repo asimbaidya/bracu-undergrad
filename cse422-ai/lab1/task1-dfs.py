@@ -25,7 +25,7 @@ def dfs(grid, size, start, count=0):
 
     i, j = start
 
-    if grid[i][j] != 'Y':
+    if grid[i][j] != "Y":
         return count
     else:
         count += 1
@@ -33,8 +33,11 @@ def dfs(grid, size, start, count=0):
     visited_one[start] = True
     for rogi in ase_pase:
         i, j = add(rogi, start)
-        if is_valid(size, (i, j)) and visited_one.get(
-            (i, j), False) == False and grid[i][j] == 'Y':
+        if (
+            is_valid(size, (i, j))
+            and visited_one.get((i, j), False) == False
+            and grid[i][j] == "Y"
+        ):
             count = dfs(grid, size, add(rogi, start), count)
     return count
 
@@ -55,11 +58,11 @@ def solve(grid):
 def read_file(file_path):
     # reading input from file into a 2d List
     raw_input = None
-    with open(file_path, 'r') as input_file:
+    with open(file_path, "r") as input_file:
         raw_input = input_file.read()
 
     grid = []
-    for line in raw_input.split('\n'):
+    for line in raw_input.split("\n"):
         row = line.split()
         if row:
             grid.append(row)
@@ -67,11 +70,11 @@ def read_file(file_path):
 
 
 def main():
-    grid1 = read_file('./input1.1.txt')
-    grid2 = read_file('./input1.2.txt')
+    grid1 = read_file("./input1.1.txt")
+    grid2 = read_file("./input1.2.txt")
     solve(grid1)
     solve(grid2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

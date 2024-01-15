@@ -31,7 +31,7 @@ def countNode(head):
 
 def solve(head, array):
     cnt = countNode(head)
-    for i in range(cnt+1):
+    for i in range(cnt + 1):
         if i > len(array):
             return head
         if array[i] % 2 == 0:
@@ -63,6 +63,6 @@ if __name__ == "__main__":
     tmp = ll.head
 
     while tmp:
-        print(tmp.ele, end=' ')
+        print(tmp.ele, end=" ")
         tmp = tmp.next
     print()

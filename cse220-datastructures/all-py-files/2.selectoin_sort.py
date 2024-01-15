@@ -7,7 +7,7 @@ def selection_sort(A):
         max_idx = i
         # finding the maximum value
         for j in range(0, i):
-            if (A[j] > max):
+            if A[j] > max:
                 max = A[j]
                 max_idx = j
         # swapping

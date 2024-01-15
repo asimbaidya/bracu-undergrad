@@ -11,48 +11,44 @@ tail = head
 # ========================================
 
 while n is not None:
-
     # do something
 
     n = n.next
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Dummy Headed Singly Linked List
 
 n = head.next
 
 while n is not None:
-
     # do something
 
     n = n.next
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Singly Circular Linked List
 
 n = head
 
 while n.next is not head:
-
     # do something
 
     n = n.next
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Dummy Headed Circular Singly Linked List
 
 n = head.next
 
 while n is not head:
-
     # do something
 
     n = n.next
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Doubly Linked List
 
@@ -61,7 +57,6 @@ while n is not head:
 n = head
 
 while n is not None:
-
     # do something
 
     n = n.next
@@ -71,12 +66,11 @@ while n is not None:
 n = tail
 
 while n is not None:
-
     # do something
 
     n = n.prev
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Dummy Headed Doubly Linked List
 
@@ -85,7 +79,6 @@ while n is not None:
 n = head.next
 
 while n is not None:
-
     # do something
 
     n = n.next
@@ -95,12 +88,11 @@ while n is not None:
 n = tail
 
 while n.prev is not None:
-
     # do something
 
     n = n.prev
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Doubly Circular Linked List
 
@@ -109,7 +101,6 @@ while n.prev is not None:
 n = head
 
 while n.next is not head:
-
     # do something
 
     n = n.next
@@ -119,12 +110,11 @@ while n.next is not head:
 n = head.prev
 
 while n.prev is not head:
-
     # do something
 
     n = n.prev
 
-#---------------------------------------#
+# ---------------------------------------#
 
 # Dummy Headed Doubly Circular Linked List
 
@@ -133,7 +123,6 @@ while n.prev is not head:
 n = head.next
 
 while n is not head:
-
     # do something
 
     n = n.next
@@ -143,9 +132,8 @@ while n is not head:
 n = head.prev
 
 while n is not head:
-
     # do something
 
     n = n.prev
 
-#---------------------------------------#
+# ---------------------------------------#

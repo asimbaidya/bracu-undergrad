@@ -1,6 +1,5 @@
 # Tree implementation using nodes
 class Node:
-
     def __init__(self, data, left=None, right=None, parent=None):
         self.data = data
         self.left = left
@@ -9,8 +8,7 @@ class Node:
 
 
 # binary tree class
-class BinaryTree():
-
+class BinaryTree:
     def __init__(self, array):
         self.root = self.create_tree(array)
 
@@ -21,9 +19,9 @@ class BinaryTree():
         node.left = self.create_tree(array, index * 2)
         node.right = self.create_tree(array, index * 2 + 1)
 
-        if (node.left is not None):
+        if node.left is not None:
             node.left.parent = node
-        if (node.right is not None):
+        if node.right is not None:
             node.right.parent = node
         return node
 
@@ -55,7 +53,7 @@ def level(node):
 def pre_order(node):
     if node is None:
         return
-    print(node.data, end=' ')
+    print(node.data, end=" ")
     pre_order(node.left)
     pre_order(node.right)
 
@@ -65,7 +63,7 @@ def in_order(node):
     if node is None:
         return
     pre_order(node.left)
-    print(node.data, end=' ')
+    print(node.data, end=" ")
     pre_order(node.right)
 
 
@@ -75,7 +73,7 @@ def post_order(node):
         return
     pre_order(node.left)
     pre_order(node.right)
-    print(node.data, end=' ')
+    print(node.data, end=" ")
 
 
 # task 6.
@@ -133,7 +131,6 @@ def get_seven_node_tree(array):
 
 
 if __name__ == "__main__":
-
     pati1 = get_seven_node_tree([x for x in range(1, 8)])
     pati2 = get_seven_node_tree([x for x in range(1, 8)])
     leti1 = get_seven_node_tree([x for x in range(7)])

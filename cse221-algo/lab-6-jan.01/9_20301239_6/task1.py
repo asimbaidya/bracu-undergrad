@@ -28,35 +28,35 @@ def lcs(x, y):
 
 def main():
     predictions = {
-        'Y': "Yasnaya",
-        'R': "Rozhok",
-        'S': "School",
-        'P': "Pochinki",
-        'F': "Farm",
-        'M': "Mylta",
-        'H': "Shelter",
-        'I': "Prison",
+        "Y": "Yasnaya",
+        "R": "Rozhok",
+        "S": "School",
+        "P": "Pochinki",
+        "F": "Farm",
+        "M": "Mylta",
+        "H": "Shelter",
+        "I": "Prison",
     }
 
-    n = ''
+    n = ""
     p = ""
     r = ""
-    with open("./input1.txt", 'r') as input_data:
+    with open("./input1.txt", "r") as input_data:
         n = int(input_data.readline()[:-1])
         p = input_data.readline()[:-1]
         r = input_data.readline()[:-1]
 
-    with open('./output1.txt', 'w') as output_data:
+    with open("./output1.txt", "w") as output_data:
         p = "YRSPFMHI"
         r = "YPSRFMHI"
 
         indexs, l = lcs(p, r)
         correctness = int((l / n) * 100)
         for i in indexs:
-            output_data.write(f'{predictions[i]} ')
-        output_data.write('\n')
-        output_data.write(f'Correctness of prediction: {correctness}%\n')
+            output_data.write(f"{predictions[i]} ")
+        output_data.write("\n")
+        output_data.write(f"Correctness of prediction: {correctness}%\n")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

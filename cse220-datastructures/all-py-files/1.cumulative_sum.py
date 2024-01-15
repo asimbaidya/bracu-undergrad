@@ -2,7 +2,7 @@ def sum_one(arr, index):
     if index == -1:
         return 0
     result = sum_one(arr, index - 1)
-    print(arr[index] + result, end=' ')
+    print(arr[index] + result, end=" ")
     return arr[index] + result
 
 
@@ -10,7 +10,7 @@ def sum_two(arr, index):
     if index == -1:
         return 0
     result = arr[index] + sum_two(arr, index - 1)
-    print(result, end=' ')
+    print(result, end=" ")
     return result
 
 

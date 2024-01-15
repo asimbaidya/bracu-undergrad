@@ -6,11 +6,11 @@ def fo_expo(base, power):
 
 
 # shit from bux
-#exponentiation
+# exponentiation
 
 
 def exponent(a, n):
-    if (n == 0):
+    if n == 0:
         return 1
     else:
         m = exponent(a, n - 1)

@@ -30,7 +30,7 @@ class LinkedListt:
             tmp = tmp.next
 
         # extra
-        if output[-4:] == ' -> ':
+        if output[-4:] == " -> ":
             output = output[:-4]
 
         return output

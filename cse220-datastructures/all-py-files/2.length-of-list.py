@@ -32,11 +32,13 @@ def list_len(head):
 if __name__ == "__main__":
     ll = List([1, 2, 3, 4, 5])
     print(list_len(ll.head))
-    ll = List([
-        1,
-        2,
-        3,
-    ])
+    ll = List(
+        [
+            1,
+            2,
+            3,
+        ]
+    )
     print(list_len(ll.head))
     ll = List([1, 2, 3, 4, 5, 6, 7, 8])
     print(list_len(ll.head))

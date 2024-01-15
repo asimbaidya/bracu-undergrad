@@ -1,4 +1,3 @@
-
 # correct
 class Node:
     def __init__(self, ele, next_=None) -> None:
@@ -45,7 +44,7 @@ def insert_node(head, index, value):
     if index == 0:
         head = Node(value, head)
         return head
-    pred = node_at(index-1)
+    pred = node_at(index - 1)
     successor = pred.next
     n = Node(value, successor)
     pred.next = n
@@ -66,7 +65,7 @@ def delete_node(head, index):
     if index == 0:
         return head.next
     else:
-        pred = node_at(index-1)
+        pred = node_at(index - 1)
         removed_node = node_at(index)  # bullshit# pred.next is best
         successor = removed_node.next
         pred.next = successor
@@ -75,7 +74,7 @@ def delete_node(head, index):
 
 
 if __name__ == "__main__":
-    name = 'pingu'
+    name = "pingu"
     head = createList(name)
     print(head)
 

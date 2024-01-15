@@ -21,25 +21,25 @@ def post_in(expr):
 
 
 if __name__ == "__main__":
-    ai = 'a+b*c-d'
-    ap = 'abc*+d-'
+    ai = "a+b*c-d"
+    ap = "abc*+d-"
 
     bi = "A*{B+C-(D+E/F)}"
     bp = "ABC+DEF/+-*"
 
-    ci = 'A+B*(C-D/E)'
-    cp = 'ABCDE/-*+'
+    ci = "A+B*(C-D/E)"
+    cp = "ABCDE/-*+"
 
     di = "a+b*(c-d/e)"
-    dp = 'abcde/-*+'
+    dp = "abcde/-*+"
 
     # quiz slver
-    q2i = 'A+[B*C+(D/E)+F]-G'
+    q2i = "A+[B*C+(D/E)+F]-G"
     q2p = "ABC*DE/+F++G-"
 
     ###################################################
-    t = 'ABC*D/+E-'
-    t = '259%+2-62-+2/36*8-1++'
+    t = "ABC*D/+E-"
+    t = "259%+2-62-+2/36*8-1++"
     res = post_in(t)
     print("--------------------------------------------------")
     print(f"postfix: {t} => infix: {res}")

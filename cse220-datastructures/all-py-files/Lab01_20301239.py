@@ -169,9 +169,9 @@ def lets_play(members, start, size):
             size -= 1
             members[(start + size) % m_size] = None
             # showing who is alive
-            print("These player are Alive: ", end=' ')
+            print("These player are Alive: ", end=" ")
             for i in range(start, start + size):
-                print(members[i % m_size], end=' ')
+                print(members[i % m_size], end=" ")
             print()
         else:
             item = members[start]
@@ -183,7 +183,7 @@ def lets_play(members, start, size):
 
 if __name__ == "__main__":
     # Task [1] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [1] of Linear Array ')
+    print("\nTesting I/O of Task [1] of Linear Array ")
     array = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
     shift_left(array, 0)
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     print(array)
 
     # Task [2] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [2] of Linear Array ')
+    print("\nTesting I/O of Task [2] of Linear Array ")
     array = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
     rotate_left(array, 1)
@@ -209,13 +209,13 @@ if __name__ == "__main__":
     print(array)
 
     # Task [3] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [3] of Linear Array ')
+    print("\nTesting I/O of Task [3] of Linear Array ")
     source = [10, 20, 30, 40, 50, 0, 0]
     remove(source, 5, 2)
     print(source)
 
     # Task [4] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [4] of Linear Array ')
+    print("\nTesting I/O of Task [4] of Linear Array ")
     source = [10, 2, 30, 2, 50, 2, 2, 60, 0, 0]
     print(source)
     remove_all(source, 8, 2)
@@ -226,38 +226,38 @@ if __name__ == "__main__":
     print(source)
 
     # Task [5] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [5] of Linear Array ')
+    print("\nTesting I/O of Task [5] of Linear Array ")
     print(split_array([1, 1, 1, 2, 1]))
     print(split_array([2, 1, 1, 2, 1]))
     print(split_array([10, 3, 10, 2, 1]))
     print(split_array([1, 2, 3, 4, 5, 6, 7, 8, 9, 45]))
 
     # Task [6] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [6] of Linear Array ')
+    print("\nTesting I/O of Task [6] of Linear Array ")
     num = int(input("Enter n: "))
     print(series(num))
 
     # Task [7] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [7] of Linear Array ')
+    print("\nTesting I/O of Task [7] of Linear Array ")
     print(max_bunch_count([1, 2, 2, 3, 4, 4, 4]))
 
     # Task [8] of Linear Array  TEST ##############################
-    print('\nTesting I/O of Task [8] of Linear Array ')
+    print("\nTesting I/O of Task [8] of Linear Array ")
     print(repetition([4, 5, 6, 6, 4, 3, 6, 4]))
     print(repetition([3, 4, 6, 3, 4, 7, 4, 6, 8, 6, 6]))
 
     # Task [a] of Circular Array  TEST ##############################
-    print('\nTesting I/O of Task [a] of Circular Array ')
+    print("\nTesting I/O of Task [a] of Circular Array ")
     print(is_palindrome([20, 10, 0, 0, 0, 10, 20, 30], 5, 5))
     print(is_palindrome([10, 20, 0, 0, 0, 10, 20, 30], 5, 5))
 
     # Task [b] of Circular Array  TEST ##############################
-    print('\nTesting I/O of Task [b] of Circular Array ')
+    print("\nTesting I/O of Task [b] of Circular Array ")
     array = [40, 50, 0, 0, 0, 10, 20, 30]
     array_ = [10, 20, 5, 0, 0, 0, 0, 0, 5, 40, 15, 25]
     print(intersection(array, 5, 5, array_, 8, 7))
 
     # Task [c] of Circular Array  TEST ##############################
-    print('\nTesting I/O of Task [c] of Circular Array ')
+    print("\nTesting I/O of Task [c] of Circular Array ")
     players = [f"P{x}" for x in range(1, 8)]
     lets_play(players, 5, 7)

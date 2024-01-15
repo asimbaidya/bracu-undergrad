@@ -1,4 +1,4 @@
-#grid walking function
+# grid walking function
 
 
 def grid_walk(m, n):

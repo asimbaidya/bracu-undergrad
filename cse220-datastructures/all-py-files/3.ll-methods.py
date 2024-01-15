@@ -1,5 +1,5 @@
 # Creating a list
-#----------------#
+# ----------------#
 class Node:
     # element - variable used to store the value
     # next - variable used to reference to link to the next node
@@ -8,7 +8,7 @@ class Node:
         self.next = n
 
 
-#---------------------Tester-----------------------#
+# ---------------------Tester-----------------------#
 # Starting of the Node
 head = None
 # Creating the nodes first
@@ -18,7 +18,7 @@ n1.next = n2
 # Assigning the head reference to the list
 head = n1
 # Creating a list
-#----------------#
+# ----------------#
 
 
 class Node:
@@ -29,7 +29,7 @@ class Node:
         self.next = n
 
 
-#---------------------Tester-----------------------#
+# ---------------------Tester-----------------------#
 # Starting of the Node
 head = None
 # Creating the nodes first
@@ -41,13 +41,13 @@ n1 = Node("10", n2)
 head = n1
 ##
 # Iteration
-#----------------#
+# ----------------#
 n = head
 while n is not None:
     # do something
     n = n.next
 # Count Node Function
-#-------------------#
+# -------------------#
 
 
 def count_node(head):
@@ -57,8 +57,10 @@ def count_node(head):
         count = count + 1
         n = n.next
     return count
+
+
 # Get Function
-#-------------------#
+# -------------------#
 
 
 def get(head, index):
@@ -70,19 +72,23 @@ def get(head, index):
         c = c + 1
         n = n.next
     return -1
+
+
 # nodeAt Function
-#-----------------#
+# -----------------#
 
 
 def node_at(head, size, index):
-    if(index < 0 or index >= size):
+    if index < 0 or index >= size:
         return None
     n = head
     for i in range(0, index):
         n = n.next
     return n
+
+
 # Set Function
-#-------------------#
+# -------------------#
 
 
 def set(head, index, elem):
@@ -93,8 +99,10 @@ def set(head, index, elem):
             n.element = elem
         c = c + 1
         n = n.next
+
+
 # indexOf Function
-#------------------#
+# ------------------#
 
 
 def index_of(head, elem):

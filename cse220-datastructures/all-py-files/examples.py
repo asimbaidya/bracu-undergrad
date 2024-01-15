@@ -37,7 +37,7 @@ class LinkedList:
             self.head = self.head.next
             return
         tmp = self.head
-        for i in range(index-1):
+        for i in range(index - 1):
             try:
                 tmp = tmp.next
             except AttributeError:
@@ -53,7 +53,7 @@ class LinkedList:
 
         new_node = Node(item)
         tmp = self.head
-        for i in range(index-1):
+        for i in range(index - 1):
             try:
                 tmp = tmp.next
             except AttributeError:

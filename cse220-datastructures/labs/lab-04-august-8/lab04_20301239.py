@@ -39,10 +39,9 @@ class ArrayStack:
             elif expr[i] == ")":
                 if self.is_empty():
                     print("This expression is NOT correct.")
-                    print(
-                        f"Error at character # {i+1} '{expr[i]}'- not opened")
+                    print(f"Error at character # {i+1} '{expr[i]}'- not opened")
                     quit = True
-                elif self.peek()[0] != '(':
+                elif self.peek()[0] != "(":
                     print("This expression is NOT correct.")
                     print(
                         f"Error at character # {self.peek()[1]} '{self.peek()[0]}'- not closed."
@@ -51,10 +50,9 @@ class ArrayStack:
             elif expr[i] == "}":
                 if self.is_empty():
                     print("This expression is NOT correct.")
-                    print(
-                        f"Error at character # {i+1} '{expr[i]}'- not opened")
+                    print(f"Error at character # {i+1} '{expr[i]}'- not opened")
                     quit = True
-                elif self.peek()[0] != '{':
+                elif self.peek()[0] != "{":
                     print(self.peek())
                     print("This expression is NOT correct.")
                     print(
@@ -64,10 +62,9 @@ class ArrayStack:
             elif expr[i] == "]":
                 if self.is_empty():
                     print("This expression is NOT correct.")
-                    print(
-                        f"Error at character # {i+1} '{expr[i]}'- not opened")
+                    print(f"Error at character # {i+1} '{expr[i]}'- not opened")
                     quit = True
-                elif self.peek()[0] != '[':
+                elif self.peek()[0] != "[":
                     print("This expression is NOT correct.")
                     print(
                         f"Error at character # {self.peek()[1]} '{self.peek()[0]}'- not closed."
@@ -130,10 +127,9 @@ class Stack:
             elif expr[i] == ")":
                 if self.is_empty():
                     print("This expression is NOT correct.")
-                    print(
-                        f"Error at character # {i+1} '{expr[i]}'- not opened")
+                    print(f"Error at character # {i+1} '{expr[i]}'- not opened")
                     quit = True
-                elif self.peek()[0] != '(':
+                elif self.peek()[0] != "(":
                     print("This expression is NOT correct.")
                     print(
                         f"Error at character # {self.peek()[1]} '{self.peek()[0]}'- not closed."
@@ -142,10 +138,9 @@ class Stack:
             elif expr[i] == "}":
                 if self.is_empty():
                     print("This expression is NOT correct.")
-                    print(
-                        f"Error at character # {i+1} '{expr[i]}'- not opened")
+                    print(f"Error at character # {i+1} '{expr[i]}'- not opened")
                     quit = True
-                elif self.peek()[0] != '{':
+                elif self.peek()[0] != "{":
                     print(self.peek())
                     print("This expression is NOT correct.")
                     print(
@@ -155,10 +150,9 @@ class Stack:
             elif expr[i] == "]":
                 if self.is_empty():
                     print("This expression is NOT correct.")
-                    print(
-                        f"Error at character # {i+1} '{expr[i]}'- not opened")
+                    print(f"Error at character # {i+1} '{expr[i]}'- not opened")
                     quit = True
-                elif self.peek()[0] != '[':
+                elif self.peek()[0] != "[":
                     print("This expression is NOT correct.")
                     print(
                         f"Error at character # {self.peek()[1]} '{self.peek()[0]}'- not closed."
@@ -176,7 +170,6 @@ class Stack:
 
 
 if __name__ == "__main__":
-
     # correct
     s1 = "1+2*(3/4)"
     # err oat ch#10 { not closed
@@ -189,7 +182,7 @@ if __name__ == "__main__":
     # test
     s = ")}]"
     s = "({["
-    s = '{(1+2)]'
+    s = "{(1+2)]"
     s = "1+2)*[3*3+{4–5(6(7/8/9)+10)–11+(12*8)]+14"
 
     all_exp = [s1, s2, s3, s4, s]
@@ -204,9 +197,9 @@ if __name__ == "__main__":
         # test for ArrayStack
         print(f'{"-"*20}Result Of ArrayStack{"-"*20}')
         st.parenthesis_balancing(ex)
-        print(end='\n')
+        print(end="\n")
 
         # test for linked list Stack
         print(f'{"-"*20}Result Of List Stack{"-"*20}')
         stack.parenthesis_balancing(ex)
-        print(end='\n\n')
+        print(end="\n\n")

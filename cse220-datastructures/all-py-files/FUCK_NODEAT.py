@@ -13,16 +13,15 @@ def node_at(index):
 
 
 def insert(head, size, elem, index):
-
-    if(index < 0 or index > size):
+    if index < 0 or index > size:
         raise Exception("Invalid index")
     newNode = Node(elem, None)
 
-    if (index == 0):
+    if index == 0:
         newNode.next = head
         head = newNode
     else:
-        pred = node_at(index-1)
+        pred = node_at(index - 1)
         newNode.next = pred.next
         pred.next = newNode
 
@@ -37,6 +36,6 @@ if __name__ == "__main__":
 
     insert(head, 4, 1999, 3)
 
-    while(head):
+    while head:
         print(head.element)
         head = head.next

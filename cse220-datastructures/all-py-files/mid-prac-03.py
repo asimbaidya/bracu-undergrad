@@ -15,7 +15,7 @@ class DHSLList:
 
     def __str__(self):
         tmp = self.head.next
-        output = ''
+        output = ""
         while tmp:
             output += f"{tmp.data} "
             tmp = tmp.next

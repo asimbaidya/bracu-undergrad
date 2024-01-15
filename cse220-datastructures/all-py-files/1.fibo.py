@@ -1,4 +1,4 @@
-#fibonacci series function
+# fibonacci series function
 
 
 def fibonacci(num):
@@ -7,7 +7,7 @@ def fibonacci(num):
     elif num == 1:
         return 1
     else:
-        return (fibonacci(num - 1) + fibonacci(num - 2))
+        return fibonacci(num - 1) + fibonacci(num - 2)
 
 
 if __name__ == "__main__":

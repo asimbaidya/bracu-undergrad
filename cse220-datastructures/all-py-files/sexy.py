@@ -17,7 +17,7 @@ files = [
 
 count = 0
 
-#final_text = open("20301239_text.txt", 'w')
+# final_text = open("20301239_text.txt", 'w')
 
 for f in files:
     count += 1
@@ -47,4 +47,4 @@ for fx in body:
 for tx in main:
     print(tx)
 
-#final_text.close()
+# final_text.close()

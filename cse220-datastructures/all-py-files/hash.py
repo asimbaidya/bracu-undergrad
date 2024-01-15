@@ -11,7 +11,6 @@ def hash(element):
 
 
 if __name__ == "__main__":
-
     A = [514, 650, 174, 559, 649, 155, 200, 255, 520, 380]
     for i in A:
         print(f"hash(i)", hash(i))

@@ -31,7 +31,7 @@ class Arr:
         l1 = len(self.arr)
         l2 = size
 
-        for i in range(self.start, self.start+self.size+1):
+        for i in range(self.start, self.start + self.size + 1):
             new_arr[i % l2] = self.arr[i % l1]
 
         self.arr = new_arr
@@ -44,9 +44,10 @@ class Arr:
         size = self.size
         if index < 0 or index == len(self.arr):
             return False
-        for i in range(index, start+size+1):
-            self.arr[(start+size-i) % len(self.arr)
-                     ] = self.arr[(start+size-i-1) % len(self.arr)]
+        for i in range(index, start + size + 1):
+            self.arr[(start + size - i) % len(self.arr)] = self.arr[
+                (start + size - i - 1) % len(self.arr)
+            ]
         self.size += 1
         self.arr[index] = value
 
@@ -55,7 +56,7 @@ class Arr:
         self.arr = self.arr[1:] + [item]
 
     def rotate_right(self):
-        item = self.arr[self.len-1]
+        item = self.arr[self.len - 1]
         self.arr = [item] + self.arr[:-1]
 
 

@@ -10,7 +10,6 @@ def vi_as_str(array):
 
 
 def show_la(array, ttl="Linear array"):
-
     ind, val = vi_as_str(array)
 
     # init table
@@ -20,12 +19,12 @@ def show_la(array, ttl="Linear array"):
     console = Console()
 
     # addign values to the table
-    tab.add_column('value')
+    tab.add_column("value")
     for v in val:
         tab.add_column(v)
 
     # addign indexes to the table
-    tab.add_row('index', *ind)
+    tab.add_row("index", *ind)
 
     # showing the outpu
     console.print(tab)
@@ -41,18 +40,18 @@ def show_ca(array, start, size, ttl="Circulry Array"):
     console = Console()
 
     # addign values to the table
-    tab.add_column('value')
+    tab.add_column("value")
     for v in val:
         tab.add_column(v)
 
     # addign ca indexex to the tables
-    f = ind[len(array) - start:]
-    l = ind[:len(array) - start]
+    f = ind[len(array) - start :]
+    l = ind[: len(array) - start]
     caind = f + l
-    tab.add_row('CA index', *caind)
+    tab.add_row("CA index", *caind)
 
     # addign la indexes to the table
-    tab.add_row('LA index', *ind)
+    tab.add_row("LA index", *ind)
 
     # showing the outpu
     console.print(tab)

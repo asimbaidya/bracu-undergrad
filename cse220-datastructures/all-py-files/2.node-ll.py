@@ -4,7 +4,7 @@ class Node:
         self.next = n
 
 
-#---------------------Tester 1-----------------------#
+# ---------------------Tester 1-----------------------#
 # Starting of the Node
 head = None
 
@@ -16,7 +16,7 @@ n1.next = n2
 # Assigning the head reference to the list
 head = n1
 
-#---------------------Tester 2-----------------------#
+# ---------------------Tester 2-----------------------#
 # Starting of the Node
 head = None
 

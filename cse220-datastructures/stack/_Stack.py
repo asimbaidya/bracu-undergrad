@@ -43,7 +43,7 @@ class Stack:
             return False
 
     def __str__(self):
-        output = ''
+        output = ""
         tmp = self.head.next
         while tmp is not None:
             output += str(tmp.data)
@@ -51,7 +51,7 @@ class Stack:
         return output
 
     def rev(self):
-        output = ''
+        output = ""
         tmp = self.head.next
         while tmp is not None:
             output = str(tmp.data) + output

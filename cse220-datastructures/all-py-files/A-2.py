@@ -1,3 +1,3 @@
-def print_rev(s,i,c):
+def print_rev(s, i, c):
     lowercase = []
     pass

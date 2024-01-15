@@ -10,7 +10,7 @@ def _node_at(head, index):
 
 
 def node_at(head, size, index):
-    if(index < 0 or index >= size):
+    if index < 0 or index >= size:
         return None
     n = head
     for i in range(0, index):

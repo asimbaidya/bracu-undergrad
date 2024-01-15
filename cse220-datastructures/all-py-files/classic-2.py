@@ -55,10 +55,9 @@ def swapDeleteMid(head):
 
 
 if __name__ == "__main__":
-
     ll = LinkedListt([1, 2, 3, 4, 5])
-    #ll2 = LinkedListt([])
-    #ll3 = LinkedListt([1])
+    # ll2 = LinkedListt([])
+    # ll3 = LinkedListt([1])
     ll4 = LinkedListt([1, 2, 3, 4, 5, 6])
     #
     swapDeleteMid(ll.head)
@@ -68,12 +67,12 @@ if __name__ == "__main__":
 
     t = ll.head
     while t:
-        print(t.ele, end=' ')
+        print(t.ele, end=" ")
         t = t.next
     print()
 
     t = ll4.head
     while t:
-        print(t.ele, end=' ')
+        print(t.ele, end=" ")
         t = t.next
     print()

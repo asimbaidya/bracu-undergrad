@@ -13,14 +13,13 @@ def in_post(expr):
 
     for ch in expr:
         if ch in ops:
-            print('operator', ch)
+            print("operator", ch)
             if s.not_empty():
                 top = s.peek()
                 if top in ops and p(top) < p(ch):
                     s.push(ch)
                 else:
-                    while s.not_empty() and s.peek() in ops and p(
-                            s.peek()) >= p(ch):
+                    while s.not_empty() and s.peek() in ops and p(s.peek()) >= p(ch):
                         output += s.pop()
                     s.push(ch)
             else:
@@ -49,25 +48,25 @@ def in_post(expr):
 
 
 if __name__ == "__main__":
-    ai = 'a+b*c-d'
-    ap = 'abc*+d-'
+    ai = "a+b*c-d"
+    ap = "abc*+d-"
 
     bi = "A*{B+C-(D+E/F)}"
     bp = "ABC+DEF/+-*"
 
-    ci = 'A+B*(C-D/E)'
-    cp = 'ABCDE/-*+'
+    ci = "A+B*(C-D/E)"
+    cp = "ABCDE/-*+"
 
     di = "a+b*(c-d/e)"
-    dp = 'abcde/-*+'
+    dp = "abcde/-*+"
 
     ri = "3+[5/7-{5%(1+3*1)-0}+1]-1"
 
     # quiz slver
-    q2i = 'A+[B*C+(D/E)+F]-G'
+    q2i = "A+[B*C+(D/E)+F]-G"
 
     # pracsheet
-    a7i = '3+[5/7-{5%(1+3*1)-0}+1]-1'
+    a7i = "3+[5/7-{5%(1+3*1)-0}+1]-1"
 
     ###################################################
     t = ci

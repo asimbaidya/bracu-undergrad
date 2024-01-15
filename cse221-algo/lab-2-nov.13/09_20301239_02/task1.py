@@ -12,7 +12,7 @@ def bubbleSort(arr, size):
 
 
 def main():
-    with open('input1.txt', 'r') as file:
+    with open("input1.txt", "r") as file:
         tmp = file.readlines()
         tmp = [i[:-1] for i in tmp]
 
@@ -22,10 +22,10 @@ def main():
         print(arr)
         bubbleSort(arr, size)
         print(arr)
-    with open('outpu1.txt', 'w') as file:
+    with open("outpu1.txt", "w") as file:
         for v in arr:
-            file.writelines(str(v) + ' ')
-        file.writelines('\n')
+            file.writelines(str(v) + " ")
+        file.writelines("\n")
 
 
 if __name__ == "__main__":

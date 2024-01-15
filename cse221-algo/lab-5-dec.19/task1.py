@@ -4,7 +4,6 @@ def solve(schedules):
     index = 0
     end = 0
     while index < len(schedules):
-
         assignment = schedules[index]
         if assignment[0] < end:
             index += 1
@@ -17,11 +16,10 @@ def solve(schedules):
 
 
 if __name__ == "__main__":
-
-    data = ''
-    with open('./input1.txt', 'r') as file:
+    data = ""
+    with open("./input1.txt", "r") as file:
         data = file.read()
-        data = data.split('\n')
+        data = data.split("\n")
         data = data[:-1]
 
     test_cases = []
@@ -33,11 +31,11 @@ if __name__ == "__main__":
             schedules.append((s, e))
         test_cases.append(schedules)
 
-    with open('output1.txt', 'w') as file:
+    with open("output1.txt", "w") as file:
         for test_index in range(len(test_cases)):
             ans = solve(test_cases[test_index])
             print(ans)
-            file.write(f'Output {test_index+1}:\n')
-            file.write(f'{len(ans)}\n')
+            file.write(f"Output {test_index+1}:\n")
+            file.write(f"{len(ans)}\n")
             for i, j in ans:
-                file.write(f'{i} {j}\n')
+                file.write(f"{i} {j}\n")

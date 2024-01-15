@@ -21,7 +21,7 @@ def task2(grid, size, start):
 
     # if alean in grid, start killing human
     i, j = start
-    if grid[i][j] != 'A':
+    if grid[i][j] != "A":
         return 0
 
     # trackers
@@ -34,8 +34,11 @@ def task2(grid, size, start):
         current = Queue.pop(0)
         for rogi in ase_pase_two:
             i, j = add(rogi, current)
-            if is_valid(size, (i, j)) and visited_two.get(
-                    (i, j), False) == False and grid[i][j] == 'H':
+            if (
+                is_valid(size, (i, j))
+                and visited_two.get((i, j), False) == False
+                and grid[i][j] == "H"
+            ):
                 Queue.append((i, j))
                 visited_two[(i, j)] = True
                 level[(i, j)] = level[current] + 1
@@ -59,24 +62,23 @@ def solve_two(grid):
     i, j = size
     for i in range(i):
         for j in range(j):
-            if grid[i][j] == 'H' and not visited_two.get((i, j), False):
+            if grid[i][j] == "H" and not visited_two.get((i, j), False):
                 alive_human_count += 1
     # print(alive_human_count)
 
     print(f"Time: {max_time} minutes")
-    print(f"{alive_human_count} survived"
-          if alive_human_count else "No one survived")
+    print(f"{alive_human_count} survived" if alive_human_count else "No one survived")
     visited_two.clear()
 
 
 def file_reader_two(file_path):
     # reading input from file into a 2d List
     raw_input = None
-    with open(file_path, 'r') as input_file:
+    with open(file_path, "r") as input_file:
         raw_input = input_file.read()
 
     grid = []
-    for line in raw_input.split('\n')[2:]:
+    for line in raw_input.split("\n")[2:]:
         row = line.split()
         if row:
             grid.append(row)
@@ -91,5 +93,5 @@ def task_2_main():
     solve_two(grid2)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     task_2_main()

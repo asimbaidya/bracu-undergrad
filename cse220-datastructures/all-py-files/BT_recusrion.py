@@ -7,7 +7,7 @@ class Node:
         self.parent = parent
 
 
-class BinaryTree():
+class BinaryTree:
     def __init__(self, array):
         self.root = Node(array[0])
         pass
@@ -69,7 +69,8 @@ def is_same_tree(tree_one, tree_two):
     if tree_one.data != tree_two.data:
         return False
     return is_same_tree(tree_one.left, tree_two.left) and is_same_tree(
-        tree_one.right, tree_two.right)
+        tree_one.right, tree_two.right
+    )
 
 
 # task 7
@@ -114,7 +115,6 @@ def get_seven_node_tree(array):
 
 
 if __name__ == "__main__":
-
     pati = get_seven_node_tree([x for x in range(1, 8)])
     pati_two = get_seven_node_tree([x for x in range(1, 8)])
     leti = get_seven_node_tree([x for x in range(7)])

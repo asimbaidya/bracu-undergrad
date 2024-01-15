@@ -20,10 +20,10 @@ def solve(schedules):
 
 
 if __name__ == "__main__":
-    data = ''
-    with open('./input2.txt', 'r') as file:
+    data = ""
+    with open("./input2.txt", "r") as file:
         data = file.read()
-        data = data.split('\n')[:-1]
+        data = data.split("\n")[:-1]
 
     test_cases = []
     while len(data) > 0:
@@ -35,9 +35,9 @@ if __name__ == "__main__":
             schedules.append((s, e))
         test_cases.append(schedules)
 
-    with open('output2.txt', 'w') as file:
+    with open("output2.txt", "w") as file:
         for test_index in range(len(test_cases)):
             ans = solve(test_cases[test_index])
             print(ans)
-            file.write(f'Output {test_index+1}:\n')
-            file.write(f'{ans}\n')
+            file.write(f"Output {test_index+1}:\n")
+            file.write(f"{ans}\n")

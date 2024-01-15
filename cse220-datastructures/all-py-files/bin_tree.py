@@ -8,7 +8,7 @@ class Node:
 
 
 # binary tree class
-class BinaryTree():
+class BinaryTree:
     def __init__(self, array):
         self.root = self.create_tree(array)
 
@@ -19,9 +19,9 @@ class BinaryTree():
         node.left = self.create_tree(array, index * 2)
         node.right = self.create_tree(array, index * 2 + 1)
 
-        if (node.left is not None):
+        if node.left is not None:
             node.left.parent = node
-        if (node.right is not None):
+        if node.right is not None:
             node.right.parent = node
         return node
 
@@ -53,7 +53,7 @@ def level(node):
 def pre_order(node):
     if node is None:
         return
-    print(node.data, end=' ')
+    print(node.data, end=" ")
     pre_order(node.left)
     pre_order(node.right)
 
@@ -63,7 +63,7 @@ def in_order(node):
     if node is None:
         return
     pre_order(node.left)
-    print(node.data, end=' ')
+    print(node.data, end=" ")
     pre_order(node.right)
 
 
@@ -73,7 +73,7 @@ def post_order(node):
         return
     pre_order(node.left)
     pre_order(node.right)
-    print(node.data, end=' ')
+    print(node.data, end=" ")
 
 
 # task 6.
@@ -135,8 +135,8 @@ if __name__ == "__main__":
     tree_1 = get_seven_node_tree(alp[:7])
 
     pre_order(tree_1)
-    print('\n', '-' * 30)
+    print("\n", "-" * 30)
     in_order(tree_1)
-    print('\n', '-' * 30)
+    print("\n", "-" * 30)
     post_order(tree_1)
-    print('\n', '-' * 30)
+    print("\n", "-" * 30)

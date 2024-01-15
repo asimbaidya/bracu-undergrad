@@ -12,9 +12,9 @@ def lets_play(members, start, size):
             size -= 1
             members[(start + size) % m_size] = None
             # showing who is alive
-            print("These player are Alive: ", end=' ')
+            print("These player are Alive: ", end=" ")
             for i in range(start, start + size):
-                print(members[i % m_size], end=' ')
+                print(members[i % m_size], end=" ")
             print()
         else:
             item = members[start]

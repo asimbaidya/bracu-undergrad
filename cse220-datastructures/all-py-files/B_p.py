@@ -15,7 +15,7 @@ class LinkedList:
 
         else:
             temp = self.head
-            while (temp.next != None):
+            while temp.next != None:
                 temp = temp.next
             temp.next = node
 

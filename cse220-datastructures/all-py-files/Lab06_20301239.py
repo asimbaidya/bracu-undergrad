@@ -97,8 +97,7 @@ def binary_search(array, item, hi, lo):
 # task 07 done
 def fib(n, mem):
     if n >= len(mem):
-        raise Exception(
-            f"Memoiation array size:=({len(mem)}) is too small for {n-1}")
+        raise Exception(f"Memoiation array size:=({len(mem)}) is too small for {n-1}")
 
     if mem[n] is not None:
         return mem[n]
@@ -122,7 +121,7 @@ class SNode:
     def show(self):
         tmp = self
         while tmp is not None:
-            print(tmp.data, end=' ')
+            print(tmp.data, end=" ")
             tmp = tmp.next
         print()
 
@@ -143,7 +142,7 @@ class SList:
             tmp = new_node
 
     def show(self):
-        print('Singly Linked list: ', end='')
+        print("Singly Linked list: ", end="")
         self.head.show()
 
 
@@ -158,13 +157,12 @@ class DList:
             tmp = new_node
 
     def show(self):
-        print('Doubly Linked list: ', end='')
+        print("Doubly Linked list: ", end="")
         self.head.show()
 
 
 # ###########Testing all taks with dummy data###########
 if __name__ == "__main__":
-
     # task 01 test
     if 1:
         array1 = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
@@ -213,14 +211,14 @@ if __name__ == "__main__":
             indx = binary_search(arr, i, len(arr) - 1, 0)
             if indx != -1:
                 assert arr[indx] == i
-                print(f'{i} does exist in:', arr, sep='\n')
+                print(f"{i} does exist in:", arr, sep="\n")
             else:
-                print(f'{i} does not exist in:', arr, sep='\n')
+                print(f"{i} does not exist in:", arr, sep="\n")
 
     # task 07 tesa
     if 7:
         arr = [None] * 1000
         f300 = fib(300, arr)
         f_300 = 222232244629420445529739893461909967206666939096499764990979600
-        print(f_300, f300, sep='\n')
+        print(f_300, f300, sep="\n")
         assert f300 == f_300

@@ -74,8 +74,7 @@ class DoublyList:
 
         if key_exist != -1:
             print("dublicate found")
-            raise Exception(
-                f"The {new_element} already exist in {key_exist} index")
+            raise Exception(f"The {new_element} already exist in {key_exist} index")
 
         # if the inex is last element
         if target is None:
@@ -130,28 +129,27 @@ class DoublyList:
 
 
 if __name__ == "__main__":
-
     ll = DoublyList([1, 2, 3, 4])
 
     # task 2.2
-    #ll.show_list()
-    #ll.show_rev()
+    # ll.show_list()
+    # ll.show_rev()
 
     # task 2.3
-    #ll.append(2)
-    #ll.append(5)
-    #ll.show_list()
-    #ll.show_rev()
+    # ll.append(2)
+    # ll.append(5)
+    # ll.show_list()
+    # ll.show_rev()
 
     # test 2.4
-    #ll.show_list()
-    #ll.insert(5, 4)
-    #ll.insert(6, 5)
-    #ll.show_rev()
+    # ll.show_list()
+    # ll.insert(5, 4)
+    # ll.insert(6, 5)
+    # ll.show_rev()
 
     # test 2.5
-    #ll.remove(3)
-    #ll.show_rev()
+    # ll.remove(3)
+    # ll.show_rev()
 
     # test 2.6
     ll.show_list()

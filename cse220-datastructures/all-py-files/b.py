@@ -22,7 +22,6 @@ def get_aux(arr):
 
 
 def find(A, aux, item):
-
     index = hash(item)
     if aux[index] == 0:
         return -1
@@ -35,10 +34,9 @@ def find(A, aux, item):
 
 
 if __name__ == "__main__":
-
     A = [514, 650, 174, 559, 649, 155, 200, 255, 520, 380]
-    #aux = get_aux(A)
+    # aux = get_aux(A)
     # print(aux)
-    #print(find(A, aux, 200))
+    # print(find(A, aux, 200))
     for i in A:
         print(i, hash(i))

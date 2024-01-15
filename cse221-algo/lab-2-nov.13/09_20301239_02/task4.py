@@ -1,5 +1,4 @@
 def merge(arr, lo, mid, hi):
-
     a = []
     b = []
     for tmp in range(lo, mid + 1):
@@ -31,9 +30,7 @@ def merge(arr, lo, mid, hi):
 
 
 def merge_sort(arr, lo, hi):
-
     if lo < hi:
-
         mid = (hi + lo) // 2
 
         merge_sort(arr, lo, mid)
@@ -43,7 +40,7 @@ def merge_sort(arr, lo, hi):
 
 
 def main():
-    with open('input4.txt', 'r') as file:
+    with open("input4.txt", "r") as file:
         tmp = file.readlines()
         tmp = [i[:-1] for i in tmp]
 
@@ -56,10 +53,10 @@ def main():
     merge_sort(arr, lo, hi)
     print(arr)
 
-    with open('outpu4.txt', 'w') as file:
+    with open("outpu4.txt", "w") as file:
         for v in arr:
-            file.writelines(str(v) + ' ')
-        file.writelines('\n')
+            file.writelines(str(v) + " ")
+        file.writelines("\n")
 
 
 if __name__ == "__main__":

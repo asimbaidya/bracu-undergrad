@@ -9,7 +9,7 @@ def bux_encoder(word, index, rand_number):
     if e_ch > 90:  # upper case
         e_ch -= 26
     e_ch = chr(e_ch)
-    word = word[:index] + e_ch + word[index + 1:]
+    word = word[:index] + e_ch + word[index + 1 :]
     return bux_encoder(word, index + 1, rand_number)
 
 
