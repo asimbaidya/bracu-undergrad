@@ -1,0 +1,11 @@
+l.o
+lex.yy.c
+y.o
+y.output
+y.tab.c
+a.out
+y.tab.h
+
+*.docx
+*.pdf
+
